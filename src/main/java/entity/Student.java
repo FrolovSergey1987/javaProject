@@ -8,12 +8,12 @@ public class Student {
     private String name;
     private String surname;
     private String group;
-    private Date date;
+    private String date;
 
     public Student() {
     }
 
-    public Student(int id, String name, String surname, String group, Date date) {
+    public Student(int id, String name, String surname, String group, String date) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -53,11 +53,11 @@ public class Student {
         this.group = group;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -81,8 +81,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", group='" + group + '\'' +
-                ", date=" + date +
+                ", date='" + date + '\'' +
                 '}';
     }
-
 }

@@ -19,4 +19,17 @@ public class StudentsController extends HttpServlet {
         req.setAttribute("students", students);
         req.getRequestDispatcher("WEB-INF/jsp/students.jsp").forward(req,resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String ids = req.getParameter("deleteStudentHidden");
+        String[] idsToDelete = ids.split("\\.");
+        for(String id :idsToDelete){
+            DBManager.deleteStudent(id);
+        }
+        List<Student> students = DBManager.getAllActiveStudents();
+        req.setAttribute("students", students);
+        req.getRequestDispatcher("WEB-INF/jsp/students.jsp").forward(req,resp);
+    }
+
 }
