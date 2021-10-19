@@ -25,7 +25,7 @@
     <h3>Вход в систему: </h3>
     <form method="post" action="/login">
         <label>Логин</label> <input type="text" name="login">
-        <label>Пароль</label> <input type="text" name="password">
+        <label>Пароль</label> <input type="password" name="password">
         <label>Выберите роль: </label>
         <select name="role">
             <option value="1">Администратор</option>
@@ -33,7 +33,13 @@
             <option value="3">Студент</option>
         </select>
         <input type="submit" value="Войти">
-
+        <div>
+            <details>
+                <summary class="testAcc">Аккаунт для проверки функционала : </summary>
+        <span>Логин : admin </span><br>
+        <span>Пароль : 123</span>
+            </details>
+        </div>
         <c:if test="${error eq 1}">
             <h4>Поля не должны быть пустыми!</h4>
         </c:if>

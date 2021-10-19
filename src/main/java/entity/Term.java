@@ -7,12 +7,19 @@ public class Term {
     private int id;
     private String name;
     private String duration;
-    private ArrayList<Discipline> disciplines = new ArrayList<Discipline>();
+    ArrayList<Discipline> disciplines = new ArrayList<Discipline>();
+
+    public Term() {
+    }
 
     public Term(int id, String name, String duration) {
         this.id = id;
         this.name = name;
         this.duration = duration;
+    }
+
+    public void addDiscipline(Discipline discipline) {
+        disciplines.add(discipline);
     }
 
     public int getId() {
@@ -68,8 +75,5 @@ public class Term {
                 ", duration='" + duration + '\'' +
                 ", disciplines=" + disciplines +
                 '}';
-    }
-    private void addDiscipline (Discipline discipline){
-        disciplines.add(discipline);
     }
 }

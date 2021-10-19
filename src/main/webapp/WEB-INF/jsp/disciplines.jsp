@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../../resources/js/function.js"></script>
+    <script type="text/javascript" src="../../resources/js/Function.js"></script>
     <title>Дисциплины</title>
 </head>
 
