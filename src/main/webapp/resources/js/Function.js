@@ -54,7 +54,7 @@ function deleteDiscipline() {
     var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
 
     if (checkedBoxes.length == 0) {
-        alert("Выберите хотя бы 1 дисциплину!");
+        alert("Выберите хотя бы одну дисциплину!");
         return;
     }
     var ids = "";

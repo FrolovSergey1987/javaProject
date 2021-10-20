@@ -61,7 +61,7 @@ public class DBManager {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/students?user=root&password=mefA1evica");
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM student where status = '1' AND id = " + 1);
+            ResultSet rs = stmt.executeQuery("SELECT * FROM student where status = '1' AND id = " + id);
             while (rs.next()) {
                 student.setId(rs.getInt("id"));
                 student.setName(rs.getString("name"));
@@ -82,7 +82,7 @@ public class DBManager {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM students.user_role as ur\n" +
                     "left join students.user as u on ur.id_user = u.id\n" +
-                    "where u.login = '" + login + "' and u.password = '" + password + "' and ur.id = '" + role + "'");
+                    "where u.login = '" + login + "' and u.password = '" + password + "' and ur.id_role = '" + role + "'");
             while (rs.next()) {
                 return true;
             }
